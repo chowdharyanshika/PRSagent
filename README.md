@@ -23,19 +23,6 @@ rather than a fixed script — given a trait name and a genotype file, it
 decides which data source to use, runs the appropriate quality checks,
 and only then produces an interpretation.
 
-## Project phases
-
-- **Phase 1 (this stage):** Core, deterministic pipeline. Search PGS
-  Catalog for existing PRS models, calculate a score on (simulated)
-  genotype data, run basic QC, and report results. No agent yet — this
-  proves each tool works correctly in isolation.
-- **Phase 2:** Wrap each step as a LangGraph tool and let an LLM agent
-  decide the workflow (e.g. compare multiple candidate PRS models, choose
-  the one with best SNP overlap, decide whether to fall back to raw GWAS
-  summary statistics).
-- **Phase 3:** Add a logistic regression layer testing whether the PRS
-  predicts a simulated phenotype, plus ancestry-mismatch warnings.
-- **Phase 4:** Streamlit front-end + polished documentation.
 
 ## Data sources (all public)
 
