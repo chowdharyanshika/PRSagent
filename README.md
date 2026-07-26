@@ -87,7 +87,3 @@ python scripts/calculate_prs.py
 python scripts/qc_checks.py
 ```
 
-## Status
-
-Phase 1 in progress — core pipeline functional with simulated data and
-live PGS Catalog API integration.
